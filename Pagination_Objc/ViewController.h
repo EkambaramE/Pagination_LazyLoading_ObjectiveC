@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodDrinksFields.h"
+#import "FoodDrinksWrapper.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <UITableViewDelegate , UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (assign) Boolean isLoadingSpecies;
+@property (strong, nonatomic) FoodDrinksFields *foodDrinksFields;
+@property (strong, nonatomic) FoodDrinksWrapper *foodDrinksWrapper;
+@property(nonatomic, strong) NSMutableArray<FoodDrink *> *foodDrinks;
 
 
 @end
